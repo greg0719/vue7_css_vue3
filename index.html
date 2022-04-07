@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="vue.global.js"></script>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>Event Binding</h1>
+        <section id = "app">
+            <!--
+            <div class="demo" :style="{borderColor: div1Selected ? 'green' : '#DDD'}" @click="divSelected(1)">Mountain</div>
+            <div class="demo" :style="{borderColor: div2Selected ? 'blue' : '#DDD'}" @click="divSelected(2)">Ocean</div>
+            <div class="demo" :style="{borderColor: div3Selected ? 'red' : '#DDD'}" @click="divSelected(3)">Sky</div>
+            -->
+            <!--
+            <div :class="div1Selected?'demo isSelected':'demo'" @click="divSelected(1)">Mountain</div>
+            <div :class="div2Selected?'demo isSelected':'demo'" @click="divSelected(2)">Ocean</div>
+            <div :class="div3Selected?'demo isSelected':'demo'" @click="divSelected(3)">Sky</div>
+            -->
+            <!--
+            <div  :class="{demo:true,isSelected:div1Selected}" @click="divSelected(1)">Mountain</div>
+            <div  :class="{demo:true,isSelected:div2Selected}" @click="divSelected(2)">Ocean</div>
+            <div  :class="{demo:true,isSelected:div3Selected}" @click="divSelected(3)">Sky</div>
+            -->
+            <!--
+            <div class="demo" :class="{isSelected:div1Selected}" @click="divSelected(1)">Mountain</div>
+            <div class="demo" :class="{isSelected:div2Selected}" @click="divSelected(2)">Ocean</div>
+            <div class="demo" :class="{isSelected:div3Selected}" @click="divSelected(3)">Sky</div>
+            -->
+            <div class="demo" :class="div1Classes" @click="divSelected(1)">Mountain</div>
+            <div class="demo" :class="div2Classes" @click="divSelected(2)">Ocean</div>
+            <div class="demo" :class="div3Classes" @click="divSelected(3)">Sky</div>
+            
+            <div class="demo" :class="['demo', {isSelected:div1Selected}]" @click="divSelected(1)">Mountain</div>
+            <div class="demo" :class="['demo', {isSelected:div2Selected}]" @click="divSelected(2)">Ocean</div>
+            <div class="demo" :class="['demo', {isSelected:div3Selected}]" @click="divSelected(3)">Sky</div>
+        </section>
+        
+        <script src="app.js" async defer></script>
+    </body>
+</html>
