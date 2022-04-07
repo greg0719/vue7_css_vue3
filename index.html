@@ -36,13 +36,20 @@
             <div class="demo" :class="{isSelected:div2Selected}" @click="divSelected(2)">Ocean</div>
             <div class="demo" :class="{isSelected:div3Selected}" @click="divSelected(3)">Sky</div>
             -->
+            <!--
             <div class="demo" :class="div1Classes" @click="divSelected(1)">Mountain</div>
             <div class="demo" :class="div2Classes" @click="divSelected(2)">Ocean</div>
             <div class="demo" :class="div3Classes" @click="divSelected(3)">Sky</div>
+            -->
             
+            <!--
             <div class="demo" :class="['demo', {isSelected:div1Selected}]" @click="divSelected(1)">Mountain</div>
             <div class="demo" :class="['demo', {isSelected:div2Selected}]" @click="divSelected(2)">Ocean</div>
             <div class="demo" :class="['demo', {isSelected:div3Selected}]" @click="divSelected(3)">Sky</div>
+            -->
+            <div class="demo" :class="['demo', div1Classes]" @click="divSelected(1)">Mountain</div>
+            <div class="demo" :class="['demo', div2Classes]" @click="divSelected(2)">Ocean</div>
+            <div class="demo" :class="['demo', div3Classes]" @click="divSelected(3)">Sky</div>
         </section>
         
         <script src="app.js" async defer></script>
